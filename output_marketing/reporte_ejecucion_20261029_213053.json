@@ -1,0 +1,25 @@
+{
+  "fecha_ejecucion": "2026-10-29 21:30:53",
+  "briefing_usado": "briefing_variacion.json",
+  "piezas_solicitadas": 1,
+  "piezas_completadas": 1,
+  "piezas_fallidas": 0,
+  "duracion_total_segundos": 37.7,
+  "tokens_totales_estimados": 4661,
+  "resultados": [
+    {
+      "estado": "completado",
+      "tipo_pieza": "post",
+      "tema": "Cómo Avril Lab acelera el prototipado de agentes MCP",
+      "archivo": "output_marketing\\post_20261029_213053.md",
+      "metricas": {
+        "llamadas_llm": 2,
+        "busquedas_web": 3,
+        "tokens_estimados": 4661
+      },
+      "duracion_segundos": 37.7,
+      "requiere_revision_humana": true
+    }
+  ],
+  "requiere_revision_humana": true
+}

@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "proyecto": "Avril Lab — C2 Arnés de Marketing",
+    "autor": "Iván",
+    "fecha": "2026-10-27",
+    "descripcion": "Briefing de ejemplo con 3 piezas de contenido para promocionar Avril Lab"
+  },
+  "piezas": [
+    {
+      "tipo_pieza": "post",
+      "tema": "Por qué los builders de IA necesitan un sandbox hosted",
+      "audiencia": "Developers e ingenieros construyendo agentes de IA en México y LATAM",
+      "oferta": "Day Pass: $6 USD por 48 horas | Trial: $15 USD por 7 días",
+      "cta": "Prueba tu primer agente en Avril Lab → avrillab.com",
+      "contexto_extra": "Muchos developers queman recursos locales (RAM, GPU) probando agentes. Avril Lab ofrece un entorno aislado hosted."
+    },
+    {
+      "tipo_pieza": "carrusel",
+      "tema": "De cero a agente MCP en 48 horas con Avril Lab",
+      "audiencia": "Founders técnicos y CTOs de startups en LATAM que exploran integración de IA",
+      "oferta": "Day Pass: $6 USD por 48 horas de seat hosted",
+      "cta": "Empieza con el Day Pass de $6 USD → avrillab.com",
+      "contexto_extra": "MCP (Model Context Protocol) permite conectar agentes con herramientas externas. Avril Lab facilita el testing de estas integraciones sin configurar servidores propios."
+    },
+    {
+      "tipo_pieza": "guion",
+      "tema": "Deja de quemar tu laptop: testing de agentes en la nube",
+      "audiencia": "Builders independientes y developers early-adopters en MX-LATAM",
+      "oferta": "Trial: $15 USD por 7 días completos de acceso",
+      "cta": "7 días por $15 USD. Activa tu trial en avrillab.com",
+      "contexto_extra": "El video debe ser informal, estilo founder-to-founder, mostrando el dolor real de correr agentes pesados localmente."
+    }
+  ]
+}
+
