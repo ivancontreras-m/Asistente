@@ -25,10 +25,10 @@ try:
 except ImportError:
     pass
 
-# Configuración del cliente OpenRouter
-api_key = os.getenv("OPENROUTER_API_KEY") or "sk-openrouter-placeholder"
+# Configuración del cliente para NVIDIA NIM (Endpoint Gratuito)
+api_key = os.getenv("NVIDIA_API_KEY") or "nvapi-placeholder"
 client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
+    base_url="https://integrate.api.nvidia.com/v1",
     api_key=api_key,
 )
 

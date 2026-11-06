@@ -1,0 +1,51 @@
+{
+  "fecha_ejecucion": "2026-11-05 18:04:32",
+  "briefing_usado": "briefing_ejemplo.json",
+  "piezas_solicitadas": 3,
+  "piezas_completadas": 3,
+  "piezas_fallidas": 0,
+  "duracion_total_segundos": 95.7,
+  "tokens_totales_estimados": 15471,
+  "resultados": [
+    {
+      "estado": "completado",
+      "tipo_pieza": "post",
+      "tema": "Por qué los builders de IA necesitan un sandbox hosted",
+      "archivo": "output_marketing\\post_20261105_180325.md",
+      "metricas": {
+        "llamadas_llm": 2,
+        "busquedas_web": 4,
+        "tokens_estimados": 4635
+      },
+      "duracion_segundos": 28.8,
+      "requiere_revision_humana": true
+    },
+    {
+      "estado": "completado",
+      "tipo_pieza": "carrusel",
+      "tema": "De cero a agente MCP en 48 horas con Avril Lab",
+      "archivo": "output_marketing\\carrusel_20261105_180357.md",
+      "metricas": {
+        "llamadas_llm": 2,
+        "busquedas_web": 4,
+        "tokens_estimados": 5332
+      },
+      "duracion_segundos": 31.6,
+      "requiere_revision_humana": true
+    },
+    {
+      "estado": "completado",
+      "tipo_pieza": "guion",
+      "tema": "Deja de quemar tu laptop: testing de agentes en la nube",
+      "archivo": "output_marketing\\guion_20261105_180432.md",
+      "metricas": {
+        "llamadas_llm": 2,
+        "busquedas_web": 4,
+        "tokens_estimados": 5504
+      },
+      "duracion_segundos": 35.3,
+      "requiere_revision_humana": true
+    }
+  ],
+  "requiere_revision_humana": true
+}

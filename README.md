@@ -61,7 +61,7 @@ cp .env.example .env
 Editar `.env` con las variables correspondientes:
 
 ```env
-OPENROUTER_API_KEY=
+NVIDIA_API_KEY=
 BRAVE_API_KEY=
 ```
 
@@ -72,9 +72,10 @@ La clave de Brave es opcional; se utiliza DuckDuckGo como alternativa.
 ### Dependencias
 
 - Python 3.10+
-- `openai>=1.0.0` (cliente OpenRouter)
+- `openai>=1.0.0` (cliente NVIDIA NIM con base_url)
 - `duckduckgo-search>=6.0.0` (fallback de búsqueda)
 - `python-dotenv>=1.0.0`
+- `python-docx>=1.0.0`
 - `requests` (búsquedas web)
 - `fastapi` + `uvicorn` (API REST)
 
@@ -86,20 +87,28 @@ La clave de Brave es opcional; se utiliza DuckDuckGo como alternativa.
 # Con el briefing de ejemplo (3 piezas)
 python agente.py --marketing briefing_ejemplo.json
 
-# Con un briefing personalizado
+# Con el briefing de variación (1 pieza)
+python agente.py --marketing briefing_variacion.json
+
+# Crear tu propio archivo JSON (ej. mi_briefing.json) y ejecutarlo
 python agente.py --marketing mi_briefing.json
 ```
 
 ### Opción 2: API REST
 
 ```bash
-# Iniciar servidor
+# 1. Iniciar servidor (Terminal 1)
 python agente.py
 
-# POST a /marketing (pieza individual)
-curl -X POST http://127.0.0.1:8000/marketing \
-  -H "Content-Type: application/json" \
-  -d '{"tipo_pieza":"post","tema":"IA en LATAM","audiencia":"CTOs","oferta":"Trial 7 días $15 USD","cta":"Visita avrillab.com"}'
+# 2. POST a /marketing (Terminal 2)
+# Windows (PowerShell):
+Invoke-RestMethod -Uri http://127.0.0.1:8000/marketing -Method Post -ContentType "application/json" -Body '{"tipo_pieza":"post","tema":"Avril Lab para builders de IA","audiencia":"Builders y founders tecnicos en MX-LATAM","oferta":"Day Pass $6 USD/48h o Trial $15 USD/7d","cta":"Reserva tu seat en avrillab.com"}'
+
+# Linux / macOS / Git Bash:
+curl -X POST http://127.0.0.1:8000/marketing -H "Content-Type: application/json" -d '{"tipo_pieza":"post","tema":"Avril Lab para builders de IA","audiencia":"Builders y founders tecnicos en MX-LATAM","oferta":"Day Pass $6 USD/48h o Trial $15 USD/7d","cta":"Reserva tu seat en avrillab.com"}'
+
+# O probar sin comandos desde el navegador (Swagger UI):
+# http://127.0.0.1:8000/docs
 ```
 
 ### Opción 3: Chat interactivo
@@ -168,18 +177,20 @@ python agente.py --marketing briefing_variacion.json
 
 ### Prueba 3: Pieza individual vía API
 
-Iniciar el servidor:
+Iniciar el servidor (Terminal 1):
 
 ```bash
 python agente.py
 ```
 
-En otra terminal, ejecutar:
+En otra terminal (Terminal 2):
 
 ```bash
-curl -X POST http://127.0.0.1:8000/marketing \
-  -H "Content-Type: application/json" \
-  -d '{"tipo_pieza":"post","tema":"IA en LATAM","audiencia":"CTOs","oferta":"Trial 7 días $15 USD","cta":"Visita avrillab.com"}'
+# Windows (PowerShell):
+Invoke-RestMethod -Uri http://127.0.0.1:8000/marketing -Method Post -ContentType "application/json" -Body '{"tipo_pieza":"post","tema":"Avril Lab para builders de IA","audiencia":"Builders y founders tecnicos en MX-LATAM","oferta":"Day Pass $6 USD/48h o Trial $15 USD/7d","cta":"Reserva tu seat en avrillab.com"}'
+
+# Linux / macOS / Git Bash:
+curl -X POST http://127.0.0.1:8000/marketing -H "Content-Type: application/json" -d '{"tipo_pieza":"post","tema":"Avril Lab para builders de IA","audiencia":"Builders y founders tecnicos en MX-LATAM","oferta":"Day Pass $6 USD/48h o Trial $15 USD/7d","cta":"Reserva tu seat en avrillab.com"}'
 ```
 
 ## Limitaciones
